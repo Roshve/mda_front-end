@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="index.css">
     <title>Mesa de ayuda</title>
 </head>
-    <body>
+    <body data-spy="scroll" data-target="#navbar" data-offset="106">
       <!-- Header -->
       <header>
-        <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
           <div class="container">  
             <a class="navbar-brand" href="#">
                 <img src="/assets/img/Logo_Mesadeayuda.png" alt="Logo Mesadeayuda">
@@ -21,7 +21,7 @@
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav ml-auto">
                   <li class="nav-item active">
                     <a class="nav-link" href="#">Inicio</a>
@@ -214,7 +214,7 @@
                 </div>
                 <div class="form-row">
                   <div class="col">
-                    <button type="button" class="btn btn-mda btn-block">Enviar</button>
+                    <button type="button" class="btn btn-mda btn-block" data-toggle="modal" data-target="#modalConfirmation">Enviar</button>
                   </div>
                 </div>
               </form>
@@ -253,6 +253,33 @@
             </div>
       </footer>
       <!-- /Footer -->
+
+      <div class="container-fluid text-uppercase">hola</div>
+
+      <!-- Modal -->
+<div class="modal fade" id="modalConfirmation" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Confirmacion de envio de correo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5>Nos estaremos comunicando contigo lo mas pronto posible</h5>
+        <div class="alert alert-success" role="alert">
+          ¡Se ha enviado tu correo con exito!
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <!-- <button type="button" class="btn btn-mda">Enviar</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Modal -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
